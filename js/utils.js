@@ -1,5 +1,5 @@
 // 时间戳 格式化
-export function formatDate(str, fmt) {
+ function formatDate(str, fmt) {
     const date = new Date(str);
     if (/(y+)/.test(fmt)) {
         fmt = fmt.replace(
@@ -31,7 +31,7 @@ function padLeftZero(str) {
 }
 
 // 节流函数  throttle：
-export const throttle = (func, delay)=>{
+ const throttle = (func, delay)=>{
     let timer = null;
     return function() {
         let context = this;
