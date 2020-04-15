@@ -544,18 +544,19 @@
             </div>
         </template>
     </body>
-    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script> -->
-    <script src="./js/vue.js"></script>
-    <!-- 引入Element组件库 -->
-    <!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+    <!-- 步数之后通过cdn 分发-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
+ <script src="https://unpkg.com/element-ui/lib/index.js"></script> 
+    <!-- <script src="./js/vue.js"></script>
     <script src="./js/element.js"></script>
-    <script src="./js/axios.min.js"></script>
-    <!-- <script src="./js/js.js"></script> -->
-
-    <script type="module">
-        //导入 格式化 时间戳 的函数 ，用于注册Vue全局的过滤器
-        import { formatDate, throttle } from '../js/utils.js';
+    <script src="./js/axios.min.js"></script> -->
+    <---导入 格式化 时间戳 的函数 ，用于注册Vue全局的过滤器---->
+    <script src="./js/utils.js"></script>
+    <script >
+       
+        // import { formatDate, throttle } from './js/utils.js';
+        
         //全局axios 的默认配置
         axios.defaults.baseURL = 'https://lab.isaaclin.cn/nCoV/api/';
         axios.defaults.timeout = 10000;
