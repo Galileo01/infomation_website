@@ -1,0 +1,237 @@
+/* 引入 normalize 统一各个浏览器的 样式*/
+@import './normalize.css';
+body{
+ 
+    background-image: url(https://p0.ssl.qhimgs4.com/t01b52ec2aebf0a350c.webp);
+    /* background-image: url(https://p0.ssl.qhimgs4.com/t01d1c5b0cc20df17dc.webp); */
+    /* background-image: url(https://p0.ssl.qhimgs4.com/t01560e2344cda1d7df.webp); */
+    background-size: 100% ;
+}
+.el-header{
+    background-color: #4169e2;
+    background-color: #00A1D6;
+
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.el-main{
+    margin:0 10px;
+}
+
+.links{
+    margin-right:90px;
+}
+.links span{
+    cursor: pointer;
+    margin-left: 10px;
+}
+.aside-nav{
+    /* background-color: #4169e2; */
+    width: 60px;
+    height: 180px;
+    box-shadow: 0 0 1px 0px rgba(0,0,0,0.3), 0 0 6px 2px rgba(0,0,0,0.15);
+    border-radius: 5px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 20;
+    right: 20px;
+    top: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    transform: translateY(-50%);
+    /* color:#fff; */
+    /* color: #4169e2; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.aside-nav .current{
+    color:#4169e2;
+}
+
+.item-wapper{
+    /* width: 40%; */
+    width: 520px;
+    margin: 10px;
+    
+}
+.item-wapper .el-card__body {
+    padding: 10px 10px 0 10px;
+
+}
+.news{
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 70%; */
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    opacity: .96;
+}
+
+.new-item{
+    font-size: 12px;
+    margin-bottom: 10px;
+    width: 500px;
+    
+}
+.new-item .title{
+    color: #4169e2;
+    font-size: 14px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.new-item .title a{
+    text-decoration: none;
+}
+.new-item .title a:hover{
+    text-decoration: underline;
+}
+.new-item .summary{
+    text-indent: 2rem;
+    
+}
+.new-item .footer{
+    margin-top: 10px;
+}
+.new-item .footer div{
+    margin-top: 5px;
+}
+
+.bts{
+    display: flex;
+    flex-direction: row;
+}
+.next{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.rumors{
+    margin-top: 10px;
+}
+.rumor-item{
+    position: relative;
+    width: 700px;
+    height: 300px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #fff;
+    opacity: .9;
+}
+.rumor-header{
+    /* width: 500px; */
+    height: 140px;
+    background-color: #2834b9;
+    opacity: .96;
+    position: relative;
+}
+.yaoyan{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    z-index: 2;
+    height: 40px;
+}
+.yaoyan2{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    width: 70px;
+    /* height: 1.1rem; */
+}
+.fei{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width:80px;
+    /* height: .64rem; */
+}
+.tag{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    /* height: .44rem; */
+    background-image: url(data:image/png;base64,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);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tag span{
+    position: relative;
+    top: 10px;
+    left: 5px;
+    font-weight: 700;
+}
+
+.rumor-item .title{
+     font-size: 20px;
+     font-weight: 700;
+     position: absolute;
+     top: 90px;
+     left: 10px;
+}
+.rumor-item .content{
+    color: black;
+    padding-left: 10px;
+}
+.mainSummary{
+    font-size: 18px;
+    font-weight: 600;
+}
+.body{
+    font-size: 14px;
+    text-indent: 2em;
+    color: #666666;
+}
+ .el-carousel__arrow 
+{
+    background-color: #2834b9 !important;
+}
+.el-tabs{
+    background-color: #fff;
+    opacity: .9;
+    padding-left: 10px;
+}
+
+.zhishis h1 ,.zhishis h2 ,.zhishis h4 .zhishis h6{
+    color: #333;;
+    font-size: 15px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+.zhishis h2{
+    color:#4169e2;;
+}
+.zhishis p{
+    font-size: 14px;
+}
+.zhishis a{
+    color: #4169e2;
+}
+
+.zhishis img{
+    height: 700px;
+}
+.el-dialog__header {
+    padding: 0;
+}
+.el-dialog img{
+    display: block;
+    width: 100%;
+}
+/* .el-tabs{
+    background: black;
+}
+body{
+    background: black;
+    color:#fff;
+} */
