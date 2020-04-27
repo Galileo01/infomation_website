@@ -29,18 +29,3 @@
 function padLeftZero(str) {
     return ('00' + str).substr(str.length);
 }
-
-// 节流函数  throttle：
- const throttle = (func, delay)=>{
-    let timer = null;
-    return function() {
-        let context = this;
-        let args = arguments;
-        if (!timer) {
-            timer = setTimeout(function() {
-                func.apply(context, args);
-                timer = null;
-            }, delay);
-        }
-    };
-};

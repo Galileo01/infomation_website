@@ -1,11 +1,16 @@
 /* 引入 normalize 统一各个浏览器的 样式*/
 @import './normalize.css';
+/* 定义 css的 样式变量*/
+:root{
+    --glo-back:url(https://p0.ssl.qhimgs4.com/t01b52ec2aebf0a350c.webp);
+    --text-color:black;
+    --local-back:#fff;
+    --new-item-title-color:#4169e2;
+}
 body{
- 
-    background-image: url(https://p0.ssl.qhimgs4.com/t01b52ec2aebf0a350c.webp);
-    /* background-image: url(https://p0.ssl.qhimgs4.com/t01d1c5b0cc20df17dc.webp); */
-    /* background-image: url(https://p0.ssl.qhimgs4.com/t01560e2344cda1d7df.webp); */
     background-size: 100% ;
+    background: var(--glo-back);
+    color: var(--text-color);
 }
 .el-header{
     background-color: #4169e2;
@@ -41,6 +46,7 @@ body{
     font-size: 14px;
     font-weight: 700;
     transform: translateY(-50%);
+    margin-top: 30px;
     /* color:#fff; */
     /* color: #4169e2; */
     text-align: center;
@@ -48,6 +54,7 @@ body{
     flex-direction: column;
     justify-content: space-around;
     cursor: pointer;
+    color: black;
 }
 .aside-nav .current{
     color:#4169e2;
@@ -77,10 +84,11 @@ body{
     font-size: 12px;
     margin-bottom: 10px;
     width: 500px;
-    
+    background-color:#fff;
+    background-color: var(--local-back);
+    color: var(--text-color);
 }
 .new-item .title{
-    color: #4169e2;
     font-size: 14px;
     margin-bottom: 5px;
     position: relative;
@@ -88,6 +96,7 @@ body{
 
 .new-item .title a{
     text-decoration: none;
+    color: var(--new-item-title-color);
 }
 .new-item .title a:hover{
     text-decoration: underline;
@@ -123,6 +132,7 @@ body{
     color: #fff;
     background-color: #fff;
     opacity: .9;
+    background-color:var(--local-back);
 }
 .rumor-header{
     /* width: 500px; */
@@ -190,7 +200,7 @@ body{
 .body{
     font-size: 14px;
     text-indent: 2em;
-    color: #666666;
+    color: var(--text-color);
 }
  .el-carousel__arrow 
 {
@@ -201,7 +211,12 @@ body{
     opacity: .9;
     padding-left: 10px;
 }
-
+.zhishis .el-tabs{
+    background-color: var(--local-back);
+}
+.el-tabs__nav div{
+    color: var(--text-color);
+}
 .zhishis h1 ,.zhishis h2 ,.zhishis h4 .zhishis h6{
     color: #333;;
     font-size: 15px;
@@ -228,10 +243,13 @@ body{
     display: block;
     width: 100%;
 }
-/* .el-tabs{
-    background: black;
+
+
+.mode img{
+    /* background-image: url(../img/day.svg); */
+    height: 38px;
+    width: 38px;
+    margin:0 auto;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
-body{
-    background: black;
-    color:#fff;
-} */
